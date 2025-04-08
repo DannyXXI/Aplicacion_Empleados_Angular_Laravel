@@ -1,0 +1,36 @@
+<h2 class="p-2"><b>LISTA DE CLIENTES</b>&nbsp;&nbsp;<a class="btn btn-info" routerLink="/">Volver al menu&nbsp;<i class="bi bi-menu-button"></i></a></h2>
+<table class="table table-striped text-center">
+    <thead class="table-dark">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>CIF</th>
+            <th>Dirección</th>
+            <th>Grupo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (servicioCliente.listaClientes.length == 0){ <!-- comporbamos que la lista este vacia -->
+            <tr>
+                <td colspan="6">Aún no hay información...</td>
+            </tr>
+        }
+        @else {
+            @for (cliente of servicioCliente.listaClientes; track $index){ <!-- recorremos la lista para mostrarla en la tabla -->
+                <tr>
+                    <td class="align-middle">{{cliente.id}}</td>
+                    <td class="align-middle">{{cliente.nombre}}</td>
+                    <td class="align-middle">{{cliente.cif}}</td>
+                    <td class="align-middle">{{cliente.direccion}}</td>
+                    <td class="align-middle">{{cliente.grupo}}</td>
+                    <td>
+                        <button type="button" class="btn btn-warning" [routerLink]="['/formulario/editar', cliente.id]">Editar&nbsp;&nbsp;<i class="bi bi-pencil-square"></i></button>
+                        &nbsp;&nbsp;
+                        <button type="button" class="btn btn-danger" (click)="borrarCliente(cliente.id)">Borrar&nbsp;&nbsp;<i class="bi bi-trash"></i></button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

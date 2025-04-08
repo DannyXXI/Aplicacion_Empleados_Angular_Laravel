@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="text-center p-4">
+        @if(IDparametro == 0){
+            <h2 class="fs-1 fw-bold text-uppercase">Alta del cliente</h2>
+        }
+        @else {
+            <h2 class="fs-1 fw-bold text-uppercase">Editar el cliente</h2>
+        } 
+        <form [formGroup]="formulario" (submit)="enviarFormulario($event)">
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre del cliente..." formControlName="nombre"/>
+            </div>
+        
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="cif">CIF</label>
+                <input type="text" class="form-control" id="cif" placeholder="CIF del cliente..." formControlName="cif"/>
+            </div>
+        
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="direccion">Dirección</label>
+                <input type="text" class="form-control" id="direccion" placeholder="Dirección del cliente..." formControlName="direccion"/>
+            </div>
+        
+            <div class="input-group mb-3">
+                <label class="input-group-text" for="grupo">Grupo</label>
+                <select class="form-select" id="grupo" formControlName="grupo">
+                    <option selected disabled value="">Elige un grupo...</option>
+                    <option value="Activos">Activos</option>
+                    <option value="Inactivos">Inactivos</option>
+                    <option value="Deudores">Deudores</option>
+                    <option value="Sin definir">Sin definir</option>
+                </select>
+            </div>
+        
+            @if(IDparametro == 0){
+                <button type="submit" class="btn btn-primary">Añadir&nbsp;&nbsp;<i class="bi bi-plus-circle"></i></button>
+                &nbsp;&nbsp;
+                <a class="btn btn-info" routerLink="/">Volver al menu&nbsp;<i class="bi bi-menu-button"></i></a>
+            }
+            @else {
+                <button type="submit" class="btn btn-warning">Guardar&nbsp;&nbsp;<i class="bi bi-floppy"></i></button>
+                &nbsp;&nbsp;
+                <a class="btn btn-danger" routerLink="/lista">Volver a la lista&nbsp;&nbsp;<i class="bi bi-x-circle"></i></a>
+            }
+        </form>
+    </div>
+</div>
