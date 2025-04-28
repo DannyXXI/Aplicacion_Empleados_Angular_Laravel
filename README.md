@@ -1,8 +1,8 @@
-# Aplicación Educativa
+# 🌟 **Aplicación Educativa** 🌟
 
-Este es un proyecto de aplicación educativa que combina un **frontend** interactivo desarrollado con **Angular 19** y un **backend** robusto utilizando **Laravel 12**. La aplicación está diseñada para ofrecer una experiencia de usuario fluida y escalable, permitiendo una gestión eficiente de los recursos educativos y facilitando la interacción entre estudiantes y profesores.
+Este es un proyecto de **aplicación educativa** que combina un **frontend** interactivo desarrollado con **Angular 19** y un **backend** robusto utilizando **Laravel 12**. La aplicación está diseñada para ofrecer una experiencia de usuario fluida y escalable, permitiendo una gestión eficiente de los recursos educativos y facilitando la interacción entre estudiantes y profesores.
 
-## Tecnologías Utilizadas
+## 🚀 **Tecnologías Utilizadas**
 
 ### Frontend
 - **Angular 19**: Framework para desarrollar aplicaciones de una sola página (SPA) con TypeScript.
@@ -16,7 +16,7 @@ Este es un proyecto de aplicación educativa que combina un **frontend** interac
 - **JWT (JSON Web Tokens)**: Para la autenticación y autorización de usuarios.
 - **API RESTful**: Para la comunicación entre el frontend y el backend.
 
-## Características Principales
+## 🎯 **Características Principales**
 
 - **Gestión de Usuarios**: Los usuarios pueden registrarse, iniciar sesión y gestionar su perfil.
 - **Contenidos Educativos**: Los estudiantes pueden acceder a cursos y recursos interactivos, mientras que los profesores pueden gestionar el contenido.
@@ -24,7 +24,7 @@ Este es un proyecto de aplicación educativa que combina un **frontend** interac
 - **Notificaciones en Tiempo Real**: Implementación de notificaciones para eventos importantes.
 - **Autenticación Segura**: Uso de JWT para garantizar la seguridad de los usuarios.
 
-## Instalación
+## 🛠️ **Instalación**
 
 ### Requisitos previos
 
